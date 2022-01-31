@@ -1,4 +1,4 @@
-# KLoadGen - Kafka + (Avro/Json Schema) Load Generator
+# KLoadGen - Kafka + (AVRO/JSON Schema) Load Generator
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/85c9817742944668b5cc75e3fa1cdb23)](https://app.codacy.com/gh/corunet/kloadgen?utm_source=github.com&utm_medium=referral&utm_content=corunet/kloadgen&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://api.travis-ci.org/corunet/kloadgen.svg?branch=master)](https://travis-ci.org/corunet/kloadgen)
@@ -108,22 +108,22 @@ Once the build is completed, copy target/kloadgen-plugin-&lt;version&gt;.jar fil
 
 * **bootstrap.servers** : broker-ip-1:port, broker-ip-2:port, broker-ip-3:port
 * **zookeeper.servers** : zookeeper-ip-1:port, zookeeper-ip-2:port, zookeeper-ip-3:port. _Optional_
-* **kafka.topic.name** : Topic on which messages will be sent
+* **Kafka.topic.name** : Topic on which messages will be sent
 * **keyed.message** : Enable adding a Key to the messages
-* **compression.type** : kafka producer compression type(none/gzip/snappy/lz4)
+* **compression.type** : Kafka producer compression type(none/gzip/snappy/lz4)
 * **batch.size** : messages batch size(increased batch size with compression like lz4 gives better throughput)
 * **linger.ms** : How much maximum time producer should wait till batch becomes full(should be 5-10 when increased batch size and compression is enabled)
 * **buffer.memory** : Total buffer memory for producer.
 * **acks** : Message sent acknowledgement, value can be (0/1/-1).
 * **send.buffer.bytes** : The size of the TCP send buffer (SO_SNDBUF) to use when sending data. If the value is -1, the OS default will be used.
 * **receive.buffer.bytes** : The size of the TCP receive buffer (SO_RCVBUF) to use when reading data. If the value is -1, the OS default will be used.
-* **security.protocol** : kafka producer protocol. Valid values are: PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL.
+* **security.protocol** : Kafka producer protocol. Valid values are: PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL.
 * **message.placeholder.key** : Config element message variable name. This name should be same as message placeholder key in serialized/plaintext config element.
 * **kerberos.auth.enabled** : YES/NO if it is disabled all below properties will be ignored
-* **java.security.auth.login.config** : jaas.conf of kafka Kerberos
+* **java.security.auth.login.config** : jaas.conf of Kafka Kerberos
 * **java.security.krb5.conf** : Kerberos server krb5.conf file
 * **sasl.kerberos.service.name** : Kafka Kerberos service name
-* **sasl.mechanism** : Configure SASL mechanism to use to connect to the kafka cluster. GSSAPI by default
+* **sasl.mechanism** : Configure SASL mechanism to use to connect to the Kafka cluster. GSSAPI by default
 * **ssl.enabled** : SSL Flag enabled/disabled use of SSL. NO as Default.
 * **ssl.key.password** : SSL password
 * **ssl.keystore.location** : SSL Keystore location
@@ -180,7 +180,7 @@ This screen will allow to choose a schema from file(.avsc or.json).
 
 ![File Generator Table](/Value_Schema_File_Load_Generator_Config.png)
 
-AVRO or Json structure will be flattened and show in the table.
+AVRO or JSON structure will be flattened and show in the table.
 
 **Note**: If there are embedded schemas, then the last of the schema's definition will be taken as the main one, and it'll be expected than the uppers are related to it. If there are unrelated schemas, they will be ignored.
 
@@ -309,13 +309,13 @@ Values will follow the same rules and the message body, if specify a type (basic
 * **receive.buffer.bytes** : The size of the TCP receive buffer (SO_RCVBUF) to use when reading data. If the value is -1, the OS default will be used.
 * **auto.offset.reset** : The initial position for each assigned partition when the group is first created before 
   consuming any message. This value can be: earliest or latest.
-* **security.protocol** : kafka producer protocol. Valid values are: PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL.
+* **security.protocol** : Kafka producer protocol. Valid values are: PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL.
 * **message.key.type** : Default message key type.
 * **kerberos.auth.enabled** : YES/NO if it is disabled all below properties will be ignored
-* **java.security.auth.login.config** : jaas.conf of kafka Kerberos
+* **java.security.auth.login.config** : jaas.conf of Kafka Kerberos
 * **java.security.krb5.conf** : Kerberos server krb5.conf file
 * **sasl.kerberos.service.name** : Kafka Kerberos service name
-* **sasl.mechanism** : Configure SASL mechanism to use to connect to the kafka cluster. GSSAPI by default
+* **sasl.mechanism** : Configure SASL mechanism to use to connect to the Kafka cluster. GSSAPI by default
 * **value.subject.name.strategy** : Default value name strategy.
 * **key.subject.name.strategy** : Default key name strategy.  
 * **ssl.enabled** : SSL Flag enabled/disabled use of SSL. NO as Default.
@@ -348,7 +348,7 @@ Values will follow the same rules and the message body, if specify a type (basic
 ### Value Schema Deserialization Configuration
 
 This configuration component allows to specify a Name Strategy to get the correct schema from registry and use it to 
-deserialize read messages. It also allows to select a deserializer, if Avro is being used,
+deserialize read messages. It also allows to select a deserializer, if AVRO is being used,
 **KafkaAvroDeserializer** must be chosen. (*io.confluent.kafka.serializers.KafkaAvroDeserializer*)
 
 ![Value Schema Deserialization Configuration](/Value_Schema_Deserialization_Config.png)
