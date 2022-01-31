@@ -7,7 +7,7 @@ ___
 
 KLoadGen is Kafka load generator plugin for JMeter designed to work with AVRO and JSON schemas. It allows sending kafka messages with a structure defined as an AVRO schema or a Json schema. It connects to the Scheme Registry Server, retrieves the subject to send and generates a random message every time.
 
-## Table of contents
+## Contents
 
 * [Getting Started](#getting-started)
 * [Producer setup](#producer-setup)
@@ -16,39 +16,36 @@ KLoadGen is Kafka load generator plugin for JMeter designed to work with AVRO an
 * [StandAlone execution](#standalone-execution)
 * [Special Thanks](#special-thanks)
 
-## Getting Started
+## General information
 
 KLoadGen includes eight main components:
 
-* **Kafka Schema Sampler** : This jmeter java sampler sends messages to kafka, it uses the value and key configuration and generates a data matching that definition. 
+* **Kafka Schema Sampler** - This jmeter java sampler sends messages to kafka, it uses the value and key configuration and generates a data matching that definition. 
 
-* **Kafka Consumer Sampler** : This jmeter java sampler reads messages from kafka, it uses the value and key configuration to deserialize read messages.
+* **Kafka Consumer Sampler** - This jmeter java sampler reads messages from kafka, it uses the value and key configuration to deserialize read messages.
 
-* **Kafka Headers Config** : This jmeter config element generates serialized object messages based on input class and its property configurations.
+* **Kafka Headers Config** - This jmeter config element generates serialized object messages based on input class and its property configurations.
 
-* **Value Serialized Config** : This jmeter config element generates plain text messages based on input schema template designed.
+* **Value Serialized Config** - This jmeter config element generates plain text messages based on input schema template designed.
 
-* **Value File Serialized Config** : This jmeter config element allows to upload a value schema file instead to get it from the Schema
-  Registry.
+* **Value File Serialized Config** - This jmeter config element allows to upload a value schema file instead to get it from the Schema Registry.
   
-* **Value Deserialized Config** : This jmeter config element allows you to define how the value of a message is 
-  deserialized.
+* **Value Deserialized Config** - This jmeter config element allows you to define how the value of a message is deserialized.
 
-* **Value Deserialized Config** : This jmeter config element allows to upload a value schema file to deserialize 
-  messages.
+* **Value Deserialized Config** - This jmeter config element allows to upload a value schema file to deserialize messages.
 
-* **Schema Registry Config** : This jmeter config element allows to configure the connection to a Schema Registry, security access,....
+* **Schema Registry Config** - This jmeter config element allows to configure the connection to a Schema Registry, security access,....
 
-* **Key Serialized Config** : This jmeter config allows to configure a Key Schema from a Schema Registry
+* **Key Serialized Config** - This jmeter config allows to configure a Key Schema from a Schema Registry
 
-* **Key File Serialized Config** : This jmeter config allows to upload a key schema file instead to get it from the Schema Registry
+* **Key File Serialized Config** - This jmeter config allows to upload a key schema file instead to get it from the Schema Registry
 
-* **Key Deserialized Config** : This jmeter config element allows you to define how the key of a message is
+* **Key Deserialized Config** - This jmeter config element allows you to define how the key of a message is
   deserialized.
   
-* **Key File Deserialized Config** : This jmeter config allows to upload a key schema to deserialize message key.
+* **Key File Deserialized Config** - This jmeter config allows to upload a key schema to deserialize message key.
 
-* **Key Simple Config** : This jmeter config allows to define a simple basic key to send into de message.
+* **Key Simple Config** - This jmeter config allows to define a simple basic key to send into de message.
 
 ### Setup
 
