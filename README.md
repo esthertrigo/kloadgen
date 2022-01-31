@@ -28,41 +28,38 @@ KLoadGen includes eight main components:
 
 * **Value Serialized Config**: This jmeter config element generates plain text messages based on input schema template designed.
 
-* **Value File Serialized Config**: This jmeter config element allows to upload a value schema file instead to get it from the Schema
-  Registry.
+* **Value File Serialized Config**: This jmeter config element allows to upload a value schema file instead to get it from the Schema Registry.
   
-* **Value Deserialized Config**: This jmeter config element allows you to define how the value of a message is 
-  deserialized.
+* **Value Deserialized Config**: This jmeter config element allows you to define how the value of a message is deserialized.
 
-* **Value Deserialized Config**: This jmeter config element allows to upload a value schema file to deserialize 
-  messages.
+* **Value Deserialized Config**: This jmeter config element allows to upload a value schema file to deserialize messages.
 
 * **Schema Registry Config**: This jmeter config element allows to configure the connection to a Schema Registry, security access,....
 
-* **Key Serialized Config**: This jmeter config allows to configure a Key Schema from a Schema Registry
+* **Key Serialized Config**: This jmeter config allows to configure a Key Schema from a Schema Registry.
 
-* **Key File Serialized Config**: This jmeter config allows to upload a key schema file instead to get it from the Schema Registry
+* **Key File Serialized Config**: This jmeter config allows to upload a key schema file instead to get it from the Schema Registry.
 
 * **Key Deserialized Config**: This jmeter config element allows you to define how the key of a message is
   deserialized.
   
-* **Key File Deserialized Config**: This jmeter config allows to upload a key schema to deserialize message key.
+* **Key File Deserialized Config**: This jmeter config allows to upload a key schema to deserialize the message key.
 
-* **Key Simple Config**: This jmeter config allows to define a simple basic key to send into de message.
+* **Key Simple Config**: This jmeter config allows to define a simple basic key to send into the message.
 
 ### Setup
 
 #### Requirement
 
-KLoadGen uses Java, hence on JMeter machine JRE 8 or superior:
+KLoadGen uses Java, hence on JMeter machine JRE 8 or higher:
 
-Install openjdk on Debian, Ubuntu, etc.,
+Install openjdk on Debian, Ubuntu, etc.
 
 ```bash
  sudo apt-get install openjdk-8-jdk
 ```
 
-Install openjdk on Fedora, Oracle Linux, Red Hat Enterprise Linux, etc.,
+Install openjdk on Fedora, Oracle Linux, Red Hat Enterprise Linux, etc.
 
 ```bash
  su -c "yum install java-1.8.0-openjdk-devel"
