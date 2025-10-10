@@ -34,7 +34,7 @@ See the [Producer configuration](https://github.com/sngular/kloadgen/wiki/produc
 
 ### Schemas
 
-KLoadGen supports schemas with both primitive and complex data types, including arrays, maps or a combination of both.
+KLoadGen supports schemas with both primitive and complex data types, including arrays, maps, or a combination of both.
 
 It also allows creating custom sequences of values and supports null values.
 
